@@ -15,7 +15,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/aws-user-forever/my-jenkins-terraform-demo-27-aug.git"
+                            git "https://github.com/yarlagadda1/my-jenkins-terraform.git"
                         }
                     }
                 }
@@ -23,10 +23,9 @@ pipeline {
 
         stage('Plan') {
             steps {
-                bat "cmd /c echo hello"
-                bat "pwd;cd terraform/ ; terraform init"
-                bat "pwd;cd terraform/ ; terraform plan -out tfplan"
-                bat "pwd;cd terraform/ ; terraform show -no-color tfplan > tfplan.txt"
+                bat "cd terraform/ ; terraform init"
+                bat "cd terraform/ ; terraform plan -out tfplan"
+                bat "cd terraform/ ; terraform show -no-color tfplan > tfplan.txt"
             }
         }
         stage('Approval') {
