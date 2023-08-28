@@ -23,9 +23,9 @@ pipeline {
 
         stage('Plan') {
             steps {
-                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraformterraform\terraform\; terraform init"
-                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraformterraform\terraform\terraform; terraform plan -out tfplan"
-                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraformterraform\terraform\terraform; terraform show -no-color tfplan > tfplan.txt"
+                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraform\terraform\; terraform init"
+                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraform\terraform\; terraform plan -out tfplan"
+                bat "cd C:\Users\yarla\OneDrive\Desktop\DevOps\my-jenkins-terraform\terraform\; terraform show -no-color tfplan > tfplan.txt"
             }
         }
         stage('Approval') {
