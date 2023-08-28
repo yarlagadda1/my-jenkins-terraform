@@ -44,7 +44,8 @@ pipeline {
 
         stage('Apply') {
             steps {
-                sh "pwd;cd terraform/ ; terraform apply -input=false tfplan"
+                cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform//"
+                 terraform apply -input=false tfplan"
             }
         }
     }
