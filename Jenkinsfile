@@ -23,11 +23,7 @@ pipeline {
 
         stage('Plan') {
             steps {
-                 cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//";
-                terraform init;
-                cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//";
-                terraform plan -out tfplan;
-                cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform//";
+                  C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform/terra.bat
                 
             }
         }
