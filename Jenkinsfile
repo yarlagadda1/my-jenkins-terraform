@@ -23,8 +23,7 @@ pipeline {
 
         stage('Plan') {
             steps {
-                  C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform/terra.bat
-                
+                  bat "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform/terra.bat"
             }
         }
         stage('Approval') {
