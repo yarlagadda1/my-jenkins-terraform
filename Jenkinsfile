@@ -26,9 +26,9 @@ pipeline {
                  cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//"
                 terraform init
                 cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//"
-                terraform plan -out "terraform//tfplan"
+                terraform plan -out tfplan
                 cd "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform//"
-               
+                
             }
         }
         stage('Approval') {
