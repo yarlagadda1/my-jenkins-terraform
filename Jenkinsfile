@@ -23,7 +23,7 @@ pipeline {
 
         stage('Plan') {
             steps {
-                  bat "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform/terra.bat"
+                  bat "C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform//terra.bat"
             }
         }
         stage('Approval') {
@@ -35,7 +35,7 @@ pipeline {
 
            steps {
                script {
-                    def plan = readFile 'terraform/tfplan.txt'
+                    def plan = readFile 'C://Users//yarla//OneDrive//Desktop//DevOps//my-jenkins-terraform//terraform//tfplan.txt'
                     input message: "Do you want to apply the plan?",
                     parameters: [text(name: 'Plan', description: 'Please review the plan', defaultValue: plan)]
                }
